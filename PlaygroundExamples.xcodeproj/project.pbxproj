@@ -32,6 +32,12 @@
 		0A1396A120227B88007C2A83 /* PlaygroundExamplesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundExamplesTests.swift; sourceTree = "<group>"; };
 		0A1396A320227B88007C2A83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A1396AE20227D1A007C2A83 /* Map.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Map.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		0A6C29ED2023C8A90065D140 /* CombineLatest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CombineLatest.playground; sourceTree = "<group>"; };
+		0A6C29EF2023C8AA0065D140 /* Materialize.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Materialize.playground; sourceTree = "<group>"; };
+		0A6C29F02023C8AA0065D140 /* Scan.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Scan.playground; sourceTree = "<group>"; };
+		0A6C29F12023C8AB0065D140 /* Filter.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Filter.playground; sourceTree = "<group>"; };
+		0A7085F82023C965005D7E27 /* FlatMap.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FlatMap.playground; sourceTree = "<group>"; };
+		0A7085F92023C971005D7E27 /* Start.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Start.playground; sourceTree = "<group>"; };
 		2D713EFDA77A5975727B3C12 /* Pods-PlaygroundExamplesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaygroundExamplesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlaygroundExamplesTests/Pods-PlaygroundExamplesTests.release.xcconfig"; sourceTree = "<group>"; };
 		5D5B7467616752D03D255CD0 /* Pods-PlaygroundExamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaygroundExamples.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlaygroundExamples/Pods-PlaygroundExamples.release.xcconfig"; sourceTree = "<group>"; };
 		6B2531BBF8600795F46B190A /* Pods-PlaygroundExamplesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaygroundExamplesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlaygroundExamplesTests/Pods-PlaygroundExamplesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -84,7 +90,8 @@
 		0A13969520227B87007C2A83 /* PlaygroundExamples */ = {
 			isa = PBXGroup;
 			children = (
-				0A1396AD20227CDD007C2A83 /* Playgrounds */,
+				0A7085FA2023C982005D7E27 /* SignalProducer */,
+				0A1396AD20227CDD007C2A83 /* Signal General */,
 				0A13969620227B87007C2A83 /* PlaygroundExamples.h */,
 				0A13969720227B87007C2A83 /* Info.plist */,
 			);
@@ -100,12 +107,25 @@
 			path = PlaygroundExamplesTests;
 			sourceTree = "<group>";
 		};
-		0A1396AD20227CDD007C2A83 /* Playgrounds */ = {
+		0A1396AD20227CDD007C2A83 /* Signal General */ = {
 			isa = PBXGroup;
 			children = (
+				0A6C29ED2023C8A90065D140 /* CombineLatest.playground */,
+				0A6C29F12023C8AB0065D140 /* Filter.playground */,
+				0A7085F82023C965005D7E27 /* FlatMap.playground */,
 				0A1396AE20227D1A007C2A83 /* Map.playground */,
+				0A6C29EF2023C8AA0065D140 /* Materialize.playground */,
+				0A6C29F02023C8AA0065D140 /* Scan.playground */,
 			);
-			path = Playgrounds;
+			path = "Signal General";
+			sourceTree = "<group>";
+		};
+		0A7085FA2023C982005D7E27 /* SignalProducer */ = {
+			isa = PBXGroup;
+			children = (
+				0A7085F92023C971005D7E27 /* Start.playground */,
+			);
+			path = SignalProducer;
 			sourceTree = "<group>";
 		};
 		198488DB5FB5CF74380359B0 /* Pods */ = {
