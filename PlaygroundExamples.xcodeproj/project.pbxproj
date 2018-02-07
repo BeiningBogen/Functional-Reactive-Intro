@@ -10,6 +10,7 @@
 		0A13969D20227B88007C2A83 /* PlaygroundExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A13969320227B87007C2A83 /* PlaygroundExamples.framework */; };
 		0A1396A220227B88007C2A83 /* PlaygroundExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1396A120227B88007C2A83 /* PlaygroundExamplesTests.swift */; };
 		0A1396A420227B88007C2A83 /* PlaygroundExamples.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A13969620227B87007C2A83 /* PlaygroundExamples.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A7AFB05202B9A06001D7CB3 /* After.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7AFB04202B9A06001D7CB3 /* After.swift */; };
 		77B9C626DC058E5254A1F448 /* Pods_PlaygroundExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D71A530D8EB9A530358D84D0 /* Pods_PlaygroundExamples.framework */; };
 		EA952BE9CC63C07B8381A055 /* Pods_PlaygroundExamplesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02B1D61ACF406F8EB630B9B /* Pods_PlaygroundExamplesTests.framework */; };
 /* End PBXBuildFile section */
@@ -37,7 +38,9 @@
 		0A6C29F02023C8AA0065D140 /* Scan.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Scan.playground; sourceTree = "<group>"; };
 		0A6C29F12023C8AB0065D140 /* Filter.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Filter.playground; sourceTree = "<group>"; };
 		0A7085F82023C965005D7E27 /* FlatMap.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FlatMap.playground; sourceTree = "<group>"; };
-		0A7085F92023C971005D7E27 /* Start.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Start.playground; sourceTree = "<group>"; };
+		0A7085F92023C971005D7E27 /* SignalsAndSignalProducers.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SignalsAndSignalProducers.playground; sourceTree = "<group>"; };
+		0A7AFB03202B97DD001D7CB3 /* ErrorHandling.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ErrorHandling.playground; sourceTree = "<group>"; };
+		0A7AFB04202B9A06001D7CB3 /* After.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = After.swift; sourceTree = "<group>"; };
 		2D713EFDA77A5975727B3C12 /* Pods-PlaygroundExamplesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaygroundExamplesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlaygroundExamplesTests/Pods-PlaygroundExamplesTests.release.xcconfig"; sourceTree = "<group>"; };
 		5D5B7467616752D03D255CD0 /* Pods-PlaygroundExamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaygroundExamples.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlaygroundExamples/Pods-PlaygroundExamples.release.xcconfig"; sourceTree = "<group>"; };
 		6B2531BBF8600795F46B190A /* Pods-PlaygroundExamplesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaygroundExamplesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlaygroundExamplesTests/Pods-PlaygroundExamplesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,8 +93,9 @@
 		0A13969520227B87007C2A83 /* PlaygroundExamples */ = {
 			isa = PBXGroup;
 			children = (
-				0A7085FA2023C982005D7E27 /* SignalProducer */,
-				0A1396AD20227CDD007C2A83 /* Signal General */,
+				0A7AFB06202B9A0C001D7CB3 /* Helpers */,
+				0A7085FA2023C982005D7E27 /* Error handling */,
+				0A1396AD20227CDD007C2A83 /* Signals in general */,
 				0A13969620227B87007C2A83 /* PlaygroundExamples.h */,
 				0A13969720227B87007C2A83 /* Info.plist */,
 			);
@@ -107,7 +111,7 @@
 			path = PlaygroundExamplesTests;
 			sourceTree = "<group>";
 		};
-		0A1396AD20227CDD007C2A83 /* Signal General */ = {
+		0A1396AD20227CDD007C2A83 /* Signals in general */ = {
 			isa = PBXGroup;
 			children = (
 				0A6C29ED2023C8A90065D140 /* CombineLatest.playground */,
@@ -117,15 +121,24 @@
 				0A6C29EF2023C8AA0065D140 /* Materialize.playground */,
 				0A6C29F02023C8AA0065D140 /* Scan.playground */,
 			);
-			path = "Signal General";
+			path = "Signals in general";
 			sourceTree = "<group>";
 		};
-		0A7085FA2023C982005D7E27 /* SignalProducer */ = {
+		0A7085FA2023C982005D7E27 /* Error handling */ = {
 			isa = PBXGroup;
 			children = (
-				0A7085F92023C971005D7E27 /* Start.playground */,
+				0A7AFB03202B97DD001D7CB3 /* ErrorHandling.playground */,
+				0A7085F92023C971005D7E27 /* SignalsAndSignalProducers.playground */,
 			);
-			path = SignalProducer;
+			path = "Error handling";
+			sourceTree = "<group>";
+		};
+		0A7AFB06202B9A0C001D7CB3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0A7AFB04202B9A06001D7CB3 /* After.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		198488DB5FB5CF74380359B0 /* Pods */ = {
@@ -215,6 +228,7 @@
 				TargetAttributes = {
 					0A13969220227B87007C2A83 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					0A13969B20227B88007C2A83 = {
@@ -354,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A7AFB05202B9A06001D7CB3 /* After.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +508,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7AA95C3A5997264BC587B4E9 /* Pods-PlaygroundExamples.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -503,9 +519,11 @@
 				INFOPLIST_FILE = PlaygroundExamples/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULE_NAME = "";
 				PRODUCT_BUNDLE_IDENTIFIER = beiningbogen.PlaygroundExamples;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -515,6 +533,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5D5B7467616752D03D255CD0 /* Pods-PlaygroundExamples.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -525,6 +544,7 @@
 				INFOPLIST_FILE = PlaygroundExamples/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULE_NAME = "";
 				PRODUCT_BUNDLE_IDENTIFIER = beiningbogen.PlaygroundExamples;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -537,6 +557,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6B2531BBF8600795F46B190A /* Pods-PlaygroundExamplesTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5PKTA338CL;
 				INFOPLIST_FILE = PlaygroundExamplesTests/Info.plist;
@@ -552,6 +573,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2D713EFDA77A5975727B3C12 /* Pods-PlaygroundExamplesTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5PKTA338CL;
 				INFOPLIST_FILE = PlaygroundExamplesTests/Info.plist;

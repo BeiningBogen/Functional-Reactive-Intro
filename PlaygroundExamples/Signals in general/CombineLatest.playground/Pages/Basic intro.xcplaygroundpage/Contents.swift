@@ -5,11 +5,11 @@ import UIKit
 import ReactiveSwift
 import ReactiveCocoa
 import Result
+import PlaygroundExamples
 
 
 let originalSignal = Signal<String, NoError>.pipe()
 let anotherSignal = Signal<Int, NoError>.pipe()
-
 
 // CombineLatest fires every time one of the signals fire, the prerequisite is that _BOTH_ signals have fired at least once!
 // The signals do not need to be of the same type
