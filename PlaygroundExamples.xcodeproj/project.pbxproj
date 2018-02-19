@@ -37,7 +37,7 @@
 		0A6C29EF2023C8AA0065D140 /* Materialize.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Materialize.playground; sourceTree = "<group>"; };
 		0A6C29F02023C8AA0065D140 /* Scan.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Scan.playground; sourceTree = "<group>"; };
 		0A6C29F12023C8AB0065D140 /* Filter.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Filter.playground; sourceTree = "<group>"; };
-		0A7085F82023C965005D7E27 /* FlatMap.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FlatMap.playground; sourceTree = "<group>"; };
+		0A7085F82023C965005D7E27 /* WithLatest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = WithLatest.playground; sourceTree = "<group>"; };
 		0A7085F92023C971005D7E27 /* SignalsAndSignalProducers.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SignalsAndSignalProducers.playground; sourceTree = "<group>"; };
 		0A7AFB03202B97DD001D7CB3 /* ErrorHandling.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ErrorHandling.playground; sourceTree = "<group>"; };
 		0A7AFB04202B9A06001D7CB3 /* After.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = After.swift; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 			children = (
 				0A6C29ED2023C8A90065D140 /* CombineLatest.playground */,
 				0A6C29F12023C8AB0065D140 /* Filter.playground */,
-				0A7085F82023C965005D7E27 /* FlatMap.playground */,
+				0A7085F82023C965005D7E27 /* WithLatest.playground */,
 				0A1396AE20227D1A007C2A83 /* Map.playground */,
 				0A6C29EF2023C8AA0065D140 /* Materialize.playground */,
 				0A6C29F02023C8AA0065D140 /* Scan.playground */,
