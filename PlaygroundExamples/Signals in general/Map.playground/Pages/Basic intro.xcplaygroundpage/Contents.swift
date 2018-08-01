@@ -2,10 +2,10 @@
 
 import UIKit
 
-import ReactiveSwift
+
 import ReactiveCocoa
 import Result
-
+import ReactiveSwift
 
 let originalSignal = Signal<String, NoError>.pipe()
 
