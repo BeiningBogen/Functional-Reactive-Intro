@@ -1,6 +1,7 @@
 //: Playground - noun: a place where people can play
 import UIKit
 
+
 import ReactiveSwift
 import ReactiveCocoa
 import Result
@@ -44,7 +45,7 @@ names.output.observeFailed { (error) in
 }
 
 after(2) {
-
+    
     names.input.send(value: ["Bogen", "Luke"])
     
     after(2) {
@@ -58,6 +59,10 @@ after(2) {
 PlaygroundPage.current.needsIndefiniteExecution = true
 
 
+
+
+
+let a = "ÆOLLKØPO)&%#"
 
 
 
