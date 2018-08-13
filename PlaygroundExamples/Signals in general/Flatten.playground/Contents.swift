@@ -36,9 +36,6 @@ weatherStation1.input.send(value: 10)
 weatherStation2.input.send(value: 12)
 weatherStation1.input.send(value: 13)
 
-
-
-
 /*Concat*/
 
 
@@ -51,8 +48,8 @@ weatherStation1.input.send(value: 13)
  */
 
 //These are the multiple channels.
-let channel1Signal = Signal<String, NoError>.pipe()
-let channel2Signal = Signal<String, NoError>.pipe()
+let newsChannelSignal = Signal<String, NoError>.pipe()
+let sportChannelSignal = Signal<String, NoError>.pipe()
 
 //This is the current channel, only displaying the latest signal entered.
 let currentChannelSignal = Signal<Signal<String, NoError>, NoError>.pipe()
@@ -62,11 +59,11 @@ currentChannelSignal.output.signal.flatten(.latest).observeValues{value in
     print(value)
 }
 
-currentChannelSignal.input.send(value: channel1Signal.output.signal)    //You select channel 1
-channel1Signal.input.send(value: "Welcome to channel 1")
-channel1Signal.input.send(value: "Here are some news")
-channel2Signal.input.send(value: "Here is some sport")  //This is not printed because it is not the latest added signal.
-currentChannelSignal.input.send(value: channel2Signal.output.signal)    //You select channel 2
-channel2Signal.input.send(value: "Welcome to channel 2")
-channel2Signal.input.send(value: "Here is some sport")
+currentChannelSignal.input.send(value: newsChannelSignal.output.signal)    //You select channel 1
+newsChannelSignal.input.send(value: "Welcome to channel 1")
+newsChannelSignal.input.send(value: "Here are some news")
+sportChannelSignal.input.send(value: "Here is some sport")  //This is not printed because it is not the latest added signal.
+currentChannelSignal.input.send(value: sportChannelSignal.output.signal)    //You select channel 2
+sportChannelSignal.input.send(value: "Welcome to channel 2")
+sportChannelSignal.input.send(value: "Here is some sport")
 
