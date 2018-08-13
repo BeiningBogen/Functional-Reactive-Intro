@@ -1,39 +1,22 @@
-//: Playground - noun: a place where people can play
-
-import UIKit
-
+import Foundation
 import ReactiveSwift
 import ReactiveCocoa
 import Result
 
-
+// Filter removes entries based on a condition.
 let originalSignal = Signal<String, NoError>.pipe()
 
-// Map converts from one return value to another
-
-let newSignal = originalSignal.output.map { string -> Bool in
-    
-    if string == "myString" {
-        return true
-    }
-    return false
+//In this case we remove empty strings.
+let newSignal = originalSignal.output.filter{ text in
+    text != ""  //Only let text that are not empty pass through
 }
-
-// the signal now returns Bool
 
 newSignal.observeValues { (value) in
     print(value)
 }
 
-
+originalSignal.input.send(value: "")
+originalSignal.input.send(value: "")
 originalSignal.input.send(value: "testValue")
 originalSignal.input.send(value: "testValue 2")
 originalSignal.input.send(value: "myString")
-
-
-
-
-
-
-
-
