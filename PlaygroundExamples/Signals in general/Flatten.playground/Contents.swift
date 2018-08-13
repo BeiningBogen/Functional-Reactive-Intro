@@ -1,3 +1,15 @@
-import UIKit
+import Foundation
+import ReactiveCocoa
+import Result
+import ReactiveSwift
+import PlaygroundExamples
+import PlaygroundSupport
 
-var str = "Hello, playground"
+
+
+/*Merge*/
+
+/*Concat*/
+
+/*Latest*/
+

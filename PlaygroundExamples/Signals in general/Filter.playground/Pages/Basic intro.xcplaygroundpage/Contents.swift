@@ -1,39 +1,27 @@
-//: Playground - noun: a place where people can play
-
-import UIKit
-
+import Foundation
 import ReactiveSwift
 import ReactiveCocoa
 import Result
 
+//Setup initial values
+let capitalSignal = Signal<String, NoError>.pipe()
+let scandinavianCapitals = ["Oslo", "Copenhagen", "Stockholm", "Helsinki", "Reykjavík", "Tórshavn", "Mariehamn"]
 
-let originalSignal = Signal<String, NoError>.pipe()
-
-// Map converts from one return value to another
-
-let newSignal = originalSignal.output.map { string -> Bool in
-    
-    if string == "myString" {
-        return true
-    }
-    return false
+//Filter removes entries based on a condition.
+//In this case we remove capitals that are not in our Scandinavia array.
+let scandinavicCapitalSignal = capitalSignal.output.filter{ capital in
+    scandinavianCapitals.contains(capital) //Only let scandinavian capitals pass through.
 }
 
-// the signal now returns Bool
-
-newSignal.observeValues { (value) in
-    print(value)
+//Print the capitals that met the condition defined above.
+scandinavicCapitalSignal.observeValues { (capital) in
+    print(capital)
 }
 
+//These are not printed because they are not in the scandinavian array.
+capitalSignal.input.send(value: "Kairo")
+capitalSignal.input.send(value: "Rome")
 
-originalSignal.input.send(value: "testValue")
-originalSignal.input.send(value: "testValue 2")
-originalSignal.input.send(value: "myString")
-
-
-
-
-
-
-
-
+//These are printed because they are in the scandinavian array.
+capitalSignal.input.send(value: "Oslo")
+capitalSignal.input.send(value: "Stockholm")
