@@ -4,19 +4,22 @@ import ReactiveCocoa
 import Result
 
 // Filter removes entries based on a condition.
-let originalSignal = Signal<String, NoError>.pipe()
+let citySignal = Signal<String, NoError>.pipe()
 
 //In this case we remove empty strings.
-let newSignal = originalSignal.output.filter{ text in
-    text != ""  //Only let text that are not empty pass through
+let nonEmptyCitySignal = citySignal.output.filter{ text in
+    text != ""  //Only let text that is not empty pass through.
 }
 
-newSignal.observeValues { (value) in
-    print(value)
+nonEmptyCitySignal.observeValues { (text) in
+    print(text)
 }
 
-originalSignal.input.send(value: "")
-originalSignal.input.send(value: "")
-originalSignal.input.send(value: "testValue")
-originalSignal.input.send(value: "testValue 2")
-originalSignal.input.send(value: "myString")
+//These are not printed because they are empty.
+citySignal.input.send(value: "")
+citySignal.input.send(value: "")
+
+//These are printed because they are not empty.
+citySignal.input.send(value: "Oslo")
+citySignal.input.send(value: "Kairo")
+citySignal.input.send(value: "Stockholm")
