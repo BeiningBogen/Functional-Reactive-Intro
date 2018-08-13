@@ -14,8 +14,8 @@ let scandinavicCapitalSignal = capitalSignal.output.filter{ capital in
 }
 
 //Print the capitals that met the condition defined above.
-scandinavicCapitalSignal.observeValues { (text) in
-    print(text)
+scandinavicCapitalSignal.observeValues { (capital) in
+    print(capital)
 }
 
 //These are not printed because they are not in the scandinavian array.
