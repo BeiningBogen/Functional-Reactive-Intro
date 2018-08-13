@@ -35,6 +35,7 @@ currentChannelSignal.output.signal.flatten(.latest).observeValues{value in
 currentChannelSignal.input.send(value: channel1Signal.output.signal)    //You select channel 1
 channel1Signal.input.send(value: "Welcome to channel 1")
 channel1Signal.input.send(value: "Here are some news")
+channel2Signal.input.send(value: "Here is some sport")  //This is not printed because it is not the latest added signal.
 currentChannelSignal.input.send(value: channel2Signal.output.signal)    //You select channel 2
 channel2Signal.input.send(value: "Welcome to channel 2")
 channel2Signal.input.send(value: "Here is some sport")
