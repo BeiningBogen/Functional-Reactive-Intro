@@ -47,6 +47,7 @@
 		7AA95C3A5997264BC587B4E9 /* Pods-PlaygroundExamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaygroundExamples.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlaygroundExamples/Pods-PlaygroundExamples.debug.xcconfig"; sourceTree = "<group>"; };
 		D02B1D61ACF406F8EB630B9B /* Pods_PlaygroundExamplesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlaygroundExamplesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D71A530D8EB9A530358D84D0 /* Pods_PlaygroundExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlaygroundExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1DDF8082112FCF7004E130A /* Reduce.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Reduce.playground; path = PlaygroundExamples/Reduce.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +115,7 @@
 		0A1396AD20227CDD007C2A83 /* Signals in general */ = {
 			isa = PBXGroup;
 			children = (
+				F1DDF8082112FCF7004E130A /* Reduce.playground */,
 				0A6C29ED2023C8A90065D140 /* CombineLatest.playground */,
 				0A6C29F12023C8AB0065D140 /* Filter.playground */,
 				0A7085F82023C965005D7E27 /* WithLatest.playground */,

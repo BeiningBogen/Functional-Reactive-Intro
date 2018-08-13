@@ -2,39 +2,40 @@
 
 import UIKit
 
-
 import ReactiveCocoa
 import Result
 import ReactiveSwift
+import PlaygroundExamples
+import PlaygroundSupport
 
-let originalSignal = Signal<String, NoError>.pipe()
-
+let originalSignal = Signal<Int, NoError>.pipe()
 
 // Map converts from one return value to another
 
-let newSignal = originalSignal.output.map { string -> Bool in
-    
-    if string == "myString" {
-        return true
-    }
-    return false
+let array = ["lol", "kjlj", "jkhkjh"]
+
+let mySignal = originalSignal.output.map{ value in
+    return array[value]
 }
 
 // the signal now returns Bool
 
-newSignal.observeValues { (value) in
+mySignal.observeValues { (value) in
     print(value)
 }
 
+originalSignal.input.send(value: 2)
 
-originalSignal.input.send(value: "testValue")
-originalSignal.input.send(value: "testValue 2")
-originalSignal.input.send(value: "myString")
-
-
-
+after(2) {
+    originalSignal.input.send(value: 0)
+}
 
 
 
+let signal1 = Signal<Void, NoError>.pipe()
+let signal2 = Signal<Int, NoError>.pipe()
 
 
+
+
+PlaygroundPage.current.needsIndefiniteExecution = true

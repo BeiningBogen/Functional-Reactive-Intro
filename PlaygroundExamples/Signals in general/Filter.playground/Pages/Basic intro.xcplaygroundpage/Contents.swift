@@ -9,7 +9,6 @@ import Result
 
 let originalSignal = Signal<String, NoError>.pipe()
 
-
 // Map converts from one return value to another
 
 let newSignal = originalSignal.output.map { string -> Bool in

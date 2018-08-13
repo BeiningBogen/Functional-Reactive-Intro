@@ -20,10 +20,8 @@ let combined = Signal.combineLatest(originalSignal.output, anotherSignal.output)
 // the signal now returns Bool
 
 combined.observeValues { (stringAndIntValue) in
-    
     let stringValue = stringAndIntValue.0
     let intValue = stringAndIntValue.1
-    
 }
 
 
