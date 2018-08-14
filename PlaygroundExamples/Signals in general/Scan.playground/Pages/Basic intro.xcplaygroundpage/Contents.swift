@@ -6,35 +6,28 @@ import ReactiveSwift
 import ReactiveCocoa
 import Result
 
+/*
+ Scan begins with an initial value.
+ It then combines the previous value with the last emitted value.
+ */
 
-let originalSignal = Signal<String, NoError>.pipe()
+/*
+ Let us say that you receive weather reports from a weather station and you want to combine these values into a csv file.
+ */
 
+let weatherStationSignal = Signal<String, NoError>.pipe()
 
-// Map converts from one return value to another
+let initialValue = "{location: Oslo, temprature: null}"
 
-let newSignal = originalSignal.output.map { string -> Bool in
-    
-    if string == "myString" {
-        return true
-    }
-    return false
+let csvFileSignal = weatherStationSignal.output.scan(initialValue){ combinedValue, newValue in
+    "\(combinedValue),\(newValue)"
 }
 
-// the signal now returns Bool
-
-newSignal.observeValues { (value) in
-    print(value)
+csvFileSignal.observeValues{number in
+    print(number)
 }
 
-
-originalSignal.input.send(value: "testValue")
-originalSignal.input.send(value: "testValue 2")
-originalSignal.input.send(value: "myString")
-
-
-
-
-
-
-
-
+weatherStationSignal.input.send(value: "{location: Oslo, temprature: 14}")
+weatherStationSignal.input.send(value: "{location: Bergen, temprature: 10}")
+weatherStationSignal.input.send(value: "{location: Trondheim, temprature: 5}")
+weatherStationSignal.input.send(value: "{location: Tønsberg, temprature: 19}")
