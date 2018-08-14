@@ -44,6 +44,11 @@
 		0A7085F92023C971005D7E27 /* SignalsAndSignalProducers.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SignalsAndSignalProducers.playground; sourceTree = "<group>"; };
 		0A7AFB03202B97DD001D7CB3 /* ErrorHandling.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ErrorHandling.playground; sourceTree = "<group>"; };
 		0A7AFB04202B9A06001D7CB3 /* After.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = After.swift; sourceTree = "<group>"; };
+		0AC2DC1D2122D1DA0039EBAC /* 1.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 1.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		0AC2DC1E2122D1E40039EBAC /* 2.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 2.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		0AC2DC1F2122D1ED0039EBAC /* 3.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 3.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		0AC2DC202122D1FC0039EBAC /* 4.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 4.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		0AC2DC212122D2160039EBAC /* 5.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 5.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		2D713EFDA77A5975727B3C12 /* Pods-PlaygroundExamplesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaygroundExamplesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlaygroundExamplesTests/Pods-PlaygroundExamplesTests.release.xcconfig"; sourceTree = "<group>"; };
 		5D5B7467616752D03D255CD0 /* Pods-PlaygroundExamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaygroundExamples.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlaygroundExamples/Pods-PlaygroundExamples.release.xcconfig"; sourceTree = "<group>"; };
 		6B2531BBF8600795F46B190A /* Pods-PlaygroundExamplesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaygroundExamplesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlaygroundExamplesTests/Pods-PlaygroundExamplesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +101,7 @@
 		0A13969520227B87007C2A83 /* PlaygroundExamples */ = {
 			isa = PBXGroup;
 			children = (
+				0AC2DC1C2122D1BF0039EBAC /* new Playgrounds */,
 				0A7AFB06202B9A0C001D7CB3 /* Helpers */,
 				0A7085FA2023C982005D7E27 /* Error handling */,
 				0A1396AD20227CDD007C2A83 /* Signals in general */,
@@ -145,6 +151,18 @@
 				0A7AFB04202B9A06001D7CB3 /* After.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		0AC2DC1C2122D1BF0039EBAC /* new Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				0AC2DC1D2122D1DA0039EBAC /* 1.playground */,
+				0AC2DC1E2122D1E40039EBAC /* 2.playground */,
+				0AC2DC1F2122D1ED0039EBAC /* 3.playground */,
+				0AC2DC202122D1FC0039EBAC /* 4.playground */,
+				0AC2DC212122D2160039EBAC /* 5.playground */,
+			);
+			path = "new Playgrounds";
 			sourceTree = "<group>";
 		};
 		198488DB5FB5CF74380359B0 /* Pods */ = {
