@@ -6,35 +6,30 @@ import ReactiveSwift
 import ReactiveCocoa
 import Result
 
+/*
+ Scan begins with an initial value.
+ It then combines the previous value with the last emitted value.
+ */
 
-let originalSignal = Signal<String, NoError>.pipe()
+/*
+ Let us say that you receive an average km per hour from a car every minute.
+ You then want to calculate average between the previous and the new value.
+ */
 
+let carSpeedSignal = Signal<Int, NoError>.pipe()
 
-// Map converts from one return value to another
+let initialValue = 0
 
-let newSignal = originalSignal.output.map { string -> Bool in
-    
-    if string == "myString" {
-        return true
-    }
-    return false
+let carAverageSpeedSignal = carSpeedSignal.output.scan(initialValue) { averageSoFar, nextAverage in //We set the initial value to 0 so that the first avg is 0
+    (averageSoFar + nextAverage) / 2    //We calculate the average of the previous average and the new average
 }
 
-// the signal now returns Bool
-
-newSignal.observeValues { (value) in
-    print(value)
+carAverageSpeedSignal.observeValues{ averageSpeed in
+    print("\(averageSpeed) km/h")
 }
 
-
-originalSignal.input.send(value: "testValue")
-originalSignal.input.send(value: "testValue 2")
-originalSignal.input.send(value: "myString")
-
-
-
-
-
-
-
-
+carSpeedSignal.input.send(value: 20)    //average of 0 (inital) and 20 is 10
+carSpeedSignal.input.send(value: 30)    //average of 10 and 30 is 20
+carSpeedSignal.input.send(value: 50)
+carSpeedSignal.input.send(value: 40)
+carSpeedSignal.input.send(value: 37)
