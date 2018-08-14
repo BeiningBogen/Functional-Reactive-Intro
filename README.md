@@ -1,16 +1,16 @@
 # Functional-Reactive-Intro
-A basic intro to functional reactive programming with alot of playgrounds!
+Basic intro to functional reactive programming with a lot of playgrounds!
 
 
 # .map()
 ### First Intro.playground
- Just a basic example of how to use .map()
+ Basic example of how to use .map()
 
 
 
 
 # .combineLatest()
 ### First Intro.playground
- Just a basic example of how to use .combineLatest()
+ Basic example of how to use .combineLatest()
 
 
