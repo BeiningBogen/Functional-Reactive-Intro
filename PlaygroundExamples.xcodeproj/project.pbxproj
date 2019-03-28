@@ -52,6 +52,7 @@
 		2D713EFDA77A5975727B3C12 /* Pods-PlaygroundExamplesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaygroundExamplesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlaygroundExamplesTests/Pods-PlaygroundExamplesTests.release.xcconfig"; sourceTree = "<group>"; };
 		5D5B7467616752D03D255CD0 /* Pods-PlaygroundExamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaygroundExamples.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlaygroundExamples/Pods-PlaygroundExamples.release.xcconfig"; sourceTree = "<group>"; };
 		6B2531BBF8600795F46B190A /* Pods-PlaygroundExamplesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaygroundExamplesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlaygroundExamplesTests/Pods-PlaygroundExamplesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6BE3A10E224CF5D0009A8E05 /* filter.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = filter.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		7AA95C3A5997264BC587B4E9 /* Pods-PlaygroundExamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaygroundExamples.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlaygroundExamples/Pods-PlaygroundExamples.debug.xcconfig"; sourceTree = "<group>"; };
 		D02B1D61ACF406F8EB630B9B /* Pods_PlaygroundExamplesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlaygroundExamplesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D71A530D8EB9A530358D84D0 /* Pods_PlaygroundExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlaygroundExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +82,7 @@
 		0A13968920227B87007C2A83 = {
 			isa = PBXGroup;
 			children = (
+				6BE3A10D224CF5BB009A8E05 /* Functions */,
 				0A13969520227B87007C2A83 /* PlaygroundExamples */,
 				0A1396A020227B88007C2A83 /* PlaygroundExamplesTests */,
 				0A13969420227B87007C2A83 /* Products */,
@@ -174,6 +176,14 @@
 				2D713EFDA77A5975727B3C12 /* Pods-PlaygroundExamplesTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		6BE3A10D224CF5BB009A8E05 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				6BE3A10E224CF5D0009A8E05 /* filter.playground */,
+			);
+			path = Functions;
 			sourceTree = "<group>";
 		};
 		8E1C115A6FEC803D4946772F /* Frameworks */ = {
