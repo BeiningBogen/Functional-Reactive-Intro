@@ -19,7 +19,6 @@ target 'PlaygroundExamples' do
   use_frameworks!
   
   pod "ReactiveSwift"
-  pod "ReactiveCocoa"
   pod "Result"
   downgrade_swift
   # Pods for PlaygroundExamples

@@ -3,7 +3,7 @@ import UIKit
 
 
 import ReactiveSwift
-import ReactiveCocoa
+
 import Result
 import PlaygroundExamples
 import PlaygroundSupport
